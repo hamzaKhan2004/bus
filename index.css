@@ -1,0 +1,344 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#cursor{
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #000;
+    z-index: 999999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f0f0f07a;
+}
+
+#nav{
+    height: 150px;
+    width: 100%;
+    border-radius: 15%;
+    position: absolute;
+    top: -5%;
+    background-color: #FBAE1F;
+    padding: 15px 0px 10px 25px;
+}
+
+#nav>#circle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    top: 25%;
+}
+#nav>#circle>i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 24px;
+}
+
+#nav>h1{
+    font-size: 55px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgba(0, 0, 0, 0.834);
+    font-weight: 900;
+}
+#nav>h1:hover ~ #cursor{
+    transform: scale(5);
+}
+#nav>#form>input{
+    font-size: 19px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,160%);
+    color: rgba(0, 0, 0, 0.505);
+    padding: 15px 25px;
+    padding-left: 50px;
+    border-radius: 40px;
+    width: 422px;
+    border: none;
+    outline: none;
+    box-shadow: 7.5px 7.5px  7.5px 0px #8f8f8f9c;
+}
+#nav>#form>i{
+    position: absolute;
+    top: 89%;
+    left: 37%;
+   font-size: 23px;
+   color: red;
+}
+#scroll{
+    position: absolute;
+    top: 20%;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background-color: #fff;
+}
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+#busNumber{
+    display: flex;
+    height: 125px;
+    width: 320px;
+    margin-top: 58px;
+    margin-left: 25px;
+    position: relative;
+}
+
+#busNumber .busNum{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    padding: 0px 20px;
+    overflow: hidden;
+    box-shadow: 4px 4px  3.1px 3.5px #6a696937;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.busNum>i{
+    font-size: 30px;
+    color: #615e5ecf;
+    margin-right: 25px;
+}
+
+.busNum>#text>h1{
+    font-weight: 500;
+    color: #000000cf;
+
+}
+
+.busNum>#text>h3{
+    font-weight: 500;
+    color: #000000c9;
+    text-wrap: nowrap;
+    font-size: 18px;
+}
+
+#nearest{
+    background-color: #fff;
+    width: 100%;
+    margin-top: 14px;
+    position: absolute;
+    top: 54%;
+    padding: 15px 50px;
+
+}
+#nearest>#text{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+#nearest>#text>h1{
+    font-size: 33px;
+}
+#nearest>#text>span{
+    font-size: 24px;
+    color: rgb(238, 57, 57);
+}
+#nearest>#container{
+    height: 550px;
+    width: 650px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 7px 7px  7px 5px   #6a696937;
+    overflow-x: hidden;
+    overflow-y: auto;
+    cursor: pointer;
+
+}
+#nearest>#container::-webkit-scrollbar{
+    border: none;
+}
+#container #nextbus #info #stop{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+#container #nextbus #info #stop #circle{
+    height: 45px;
+    width: 45px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ffffffc5;
+    justify-content: center;
+    margin-left: -20px;
+    
+}
+
+#container #nextbus #info #stop #circle i{
+    color: #fff;
+    font-size: 24px;
+}
+#container #nextbus #info #stop #circle span{
+    height: 25px;
+    width: 4px;
+    background-color: #000;
+    position: absolute;
+    top: 11%;
+}
+#container #nextbus #info #stop #icon{
+    font-size: 20px;
+    color: #000000a2;
+}
+
+#container #nextbus #btn{
+    width: auto;
+    position: absolute;
+    top: 105px;
+
+    padding: 5px 9px;
+    font-size: 19px;
+    font-weight: 900;
+    background-color: #b8b5b56e;
+    color: #464343;
+}
+
+#container #nextbus .bus-div{
+    position: relative;
+    top: 150px;
+    border-bottom: 2px solid #dadada;
+    margin-bottom: 35px;
+}
+#container #nextbus .bus-div #busNum{
+    display: flex;
+}
+#container #nextbus .bus-div #busNum>#text h1{
+    color: #000;
+    margin-bottom: 10px;
+}
+#container #nextbus .bus-div #busNum>#text h3{
+    color: #000;
+    margin-bottom: 25px;
+}
+#container #nextbus .bus-div #busNum span{
+   margin-left: 100px;
+   color: rgb(3, 175, 233);
+   font-size: 25px;
+   display: flex;
+}
+#container #nextbus .bus-div #busNum span .gap{
+    font-size: 15px;
+    margin-right: 17px;
+    rotate: -55deg;
+    position: relative;
+    top: -10px;
+    left: 42px;
+}
+
+
+#page2{
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    padding: 0px 200px;
+}
+#page2 #map{
+    position: relative;
+    top: 40%;
+    width: 100%;
+}
+
+#page2 #map h1{
+    font-size: 55px;
+    padding-bottom: 55px;
+    padding-left: 50px;
+}
+
+#page2 #map #frame{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 550px;
+    width: 1000px;
+    border: 8px solid white;
+    box-shadow: 7.5px 7.5px  7.5px 6px #8f8f8f9c, 7.5px 7.5px  7.5px 6px #8f8f8f9c;
+}
+iframe{
+    height: 100%;
+    width: 100%;
+}
+#footer{
+    height: 65vh;
+    width: 100vw;
+    position: relative;
+    padding: 100px 50px;
+    margin-top: 100px;
+    background-color: #FFC042;
+    display: flex;
+    justify-content: space-evenly;
+}
+#firstC,#seC,#thirdC{
+    height: 520px;
+    width: 360px;
+    line-height: 1.5;
+}
+#firstC h1{
+    font-size: 35px;
+}
+#firstC h3{
+    font-size: 25px;
+}
+#firstC p{
+    font-size: 19px;
+}
+#seC #social{
+    display: flex;
+    margin-right: 10px;
+}
+#seC .circle{
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+#seC .circle i{
+    font-size: 30px;
+}
+#seC .circle a{
+    color: #000;
+    text-decoration: none
+}
+
+#thirdC h3{
+    font-size: 25px;
+}
+
+#thirdC p{
+    font-size: 19px;
+}
